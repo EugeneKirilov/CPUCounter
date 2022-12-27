@@ -13,9 +13,13 @@ let activeAppsNames = workspace.runningApplications
     .filter { $0.activationPolicy == .regular }
     .map{($0.bundleIdentifier ?? "none")
     .components(separatedBy: ".").last ?? "none"}
+let activeAppsPID = workspace.runningApplications
+    .filter { $0.activationPolicy == .regular }
+    .map{($0.processIdentifier)}
 
 func printRunningApplications() {
     print("List of running programs: ")
     activeAppsNames.forEach { print($0.capitalized) }
     print()
+    activeAppsPID.forEach { print(String($0)) }
 }
