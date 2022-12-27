@@ -21,5 +21,4 @@ func printRunningApplications() {
     print("List of running programs: ")
     activeAppsNames.forEach { print($0.capitalized) }
     print()
-    activeAppsPID.forEach { print(String($0)) }
 }
