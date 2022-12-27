@@ -12,3 +12,11 @@ import Cocoa
 
 printHelloAndAbout()
 
+printRunningApplications()
+
+do {
+    try print(safeShell("ps aux"))
+}
+catch {
+    print("\(error)") //handle or silence the error here
+}
