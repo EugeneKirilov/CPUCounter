@@ -14,6 +14,8 @@ var pidCPUDictionary = [String: String]()
 func makePidCpuDictionary() {
     do {
         try pids = safeShell("ps -eo pid").components(separatedBy: "\n").map {$0.trimmingCharacters(in: .whitespaces)}
+        pids.removeFirst()
+        print(pids)
     }
     catch let error {
         print(error.localizedDescription)
@@ -21,6 +23,8 @@ func makePidCpuDictionary() {
 
     do {
         try cpus = safeShell("ps -eo %cpu").components(separatedBy: "\n").map { $0.trimmingCharacters(in: .whitespaces)}
+        cpus.removeFirst()
+        print(cpus)
     }
     catch let error {
         print(error.localizedDescription)
