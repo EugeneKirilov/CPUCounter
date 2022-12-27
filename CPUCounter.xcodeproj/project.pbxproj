@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E43228AC295B0BAD005169FC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43228AB295B0BAD005169FC /* main.swift */; };
+		E4ADFCFE295B164A00A93E23 /* printHelloAndAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		E43228A8295B0BAD005169FC /* CPUCounter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPUCounter; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43228AB295B0BAD005169FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printHelloAndAbout.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +59,7 @@
 		E43228AA295B0BAD005169FC /* CPUCounter */ = {
 			isa = PBXGroup;
 			children = (
+				E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */,
 				E43228AB295B0BAD005169FC /* main.swift */,
 			);
 			path = CPUCounter;
@@ -120,6 +123,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4ADFCFE295B164A00A93E23 /* printHelloAndAbout.swift in Sources */,
 				E43228AC295B0BAD005169FC /* main.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
