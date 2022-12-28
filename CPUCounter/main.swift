@@ -13,6 +13,10 @@ import Cocoa
 printHelloAndAbout()
 
 printRunningApplications()
-makePidCpuDictionary()
+makeNameCpuDictionary()
+
+for (name, cpu) in nameCpuDictionary {
+    print("\(name) - \(cpu)")
+}
 
 
