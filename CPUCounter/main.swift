@@ -5,22 +5,25 @@
 //  Created by Zenya Kirilov on 27.12.22.
 //
 
-/* Реализовать приложение (консольное), которое будет брать запущенные пользователем программы в OS (типо chrome, telegram, sourcetree и тд) и выводить процентное значение загрузки этими приложениями CPU. */
-
 import Foundation
 import Cocoa
 
+// приветственные слова
 printHelloAndAbout()
-
+// сразу печатаем список запущенных программ
 printRunningApplications()
 
+// генерируем массив с данными из терминала для дальнейшего создания CSV
 makeArrayForCSV()
 
+// создание CSV на основе сгенерированного в предыдущей функции массива
 createCSV(from: arrayForCSV)
 
+// читаем данные из CSV
 var data = readDataFromCSV(fileName: "CSVRec.csv")
 let csvRows = csv(data: data ?? "none")
 
+// функция показа данных о загрузке процессора
 showCPULoad(dataDictionary: csvRows)
 
 

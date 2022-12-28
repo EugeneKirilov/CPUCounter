@@ -7,6 +7,7 @@
 
 import Foundation
 
+// стартовая функция, которая выводит приветственные слова
 func printHelloAndAbout() {
     print()
     print("Hi, there!")
