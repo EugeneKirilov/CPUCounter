@@ -11,8 +11,10 @@
 		E4ADFCFE295B164A00A93E23 /* printHelloAndAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */; };
 		E4ADFD02295B1C2900A93E23 /* printRunningApplications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */; };
 		E4ADFD04295B278000A93E23 /* safeShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD03295B278000A93E23 /* safeShell.swift */; };
-		E4ADFD08295B323100A93E23 /* makePidCpuDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD07295B323100A93E23 /* makePidCpuDictionary.swift */; };
-		E4ADFD0A295B36EC00A93E23 /* makeNameCpuDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD09295B36EC00A93E23 /* makeNameCpuDictionary.swift */; };
+		E4ADFD08295B323100A93E23 /* CSVWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD07295B323100A93E23 /* CSVWriter.swift */; };
+		E4ADFD0D295C2D2000A93E23 /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */; };
+		E4ADFD12295C52B600A93E23 /* watchCPULoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */; };
+		E4ADFD14295C53C800A93E23 /* showCPULoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD13295C53C800A93E23 /* showCPULoad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -33,8 +35,10 @@
 		E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printHelloAndAbout.swift; sourceTree = "<group>"; };
 		E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printRunningApplications.swift; sourceTree = "<group>"; };
 		E4ADFD03295B278000A93E23 /* safeShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = safeShell.swift; sourceTree = "<group>"; };
-		E4ADFD07295B323100A93E23 /* makePidCpuDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makePidCpuDictionary.swift; sourceTree = "<group>"; };
-		E4ADFD09295B36EC00A93E23 /* makeNameCpuDictionary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = makeNameCpuDictionary.swift; sourceTree = "<group>"; };
+		E4ADFD07295B323100A93E23 /* CSVWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVWriter.swift; sourceTree = "<group>"; };
+		E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
+		E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchCPULoad.swift; sourceTree = "<group>"; };
+		E4ADFD13295C53C800A93E23 /* showCPULoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = showCPULoad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,14 +71,48 @@
 		E43228AA295B0BAD005169FC /* CPUCounter */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */,
-				E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */,
-				E4ADFD03295B278000A93E23 /* safeShell.swift */,
-				E4ADFD07295B323100A93E23 /* makePidCpuDictionary.swift */,
-				E4ADFD09295B36EC00A93E23 /* makeNameCpuDictionary.swift */,
+				E4ADFD15295C5A4800A93E23 /* Start prints */,
+				E4ADFD16295C5A6400A93E23 /* Working with shell */,
+				E4ADFD17295C5A7B00A93E23 /* CSVManager */,
+				E4ADFD18295C5A9F00A93E23 /* CPU loading funcs */,
 				E43228AB295B0BAD005169FC /* main.swift */,
 			);
 			path = CPUCounter;
+			sourceTree = "<group>";
+		};
+		E4ADFD15295C5A4800A93E23 /* Start prints */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */,
+				E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */,
+			);
+			path = "Start prints";
+			sourceTree = "<group>";
+		};
+		E4ADFD16295C5A6400A93E23 /* Working with shell */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFD03295B278000A93E23 /* safeShell.swift */,
+			);
+			path = "Working with shell";
+			sourceTree = "<group>";
+		};
+		E4ADFD17295C5A7B00A93E23 /* CSVManager */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFD07295B323100A93E23 /* CSVWriter.swift */,
+				E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */,
+			);
+			path = CSVManager;
+			sourceTree = "<group>";
+		};
+		E4ADFD18295C5A9F00A93E23 /* CPU loading funcs */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */,
+				E4ADFD13295C53C800A93E23 /* showCPULoad.swift */,
+			);
+			path = "CPU loading funcs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -136,11 +174,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4ADFCFE295B164A00A93E23 /* printHelloAndAbout.swift in Sources */,
+				E4ADFD12295C52B600A93E23 /* watchCPULoad.swift in Sources */,
 				E4ADFD04295B278000A93E23 /* safeShell.swift in Sources */,
 				E4ADFD02295B1C2900A93E23 /* printRunningApplications.swift in Sources */,
-				E4ADFD0A295B36EC00A93E23 /* makeNameCpuDictionary.swift in Sources */,
 				E43228AC295B0BAD005169FC /* main.swift in Sources */,
-				E4ADFD08295B323100A93E23 /* makePidCpuDictionary.swift in Sources */,
+				E4ADFD14295C53C800A93E23 /* showCPULoad.swift in Sources */,
+				E4ADFD08295B323100A93E23 /* CSVWriter.swift in Sources */,
+				E4ADFD0D295C2D2000A93E23 /* CSVReader.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
