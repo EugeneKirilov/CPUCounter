@@ -41,7 +41,8 @@ func makeArrayForCSV() {
 func createCSV(from recArray:[Dictionary<String, String>]) {
     var csvString = "\("PID"),\("%CPU")\n"
     for dct in recArray {
-        csvString = csvString.appending("\((dct.keys).filter{ ("0"..."9").contains($0) }.joined()) ,\((dct.values).filter{ ("0"..."9").contains($0) || $0 == "." }.joined())\n")
+        csvString = csvString
+            .appending("\((dct.keys).joined()) ,\((dct.values).joined())\n")
     }
     
     let fileManager = FileManager.default

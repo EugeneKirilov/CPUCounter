@@ -7,25 +7,32 @@
 
 import Foundation
 
-func readDataFromCSV(fileName: String, fileType: String?, directory: String?) -> String? {
-    guard let filepath = Bundle.main.path(forResource: fileName, ofType: fileType, inDirectory: directory) else {
+func readDataFromCSV(fileName: String) -> String? {
+    guard let dir = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask).first else {
         return nil
     }
+    let fileURL = dir.appendingPathComponent(fileName)
     do {
-        let contents = try String(contentsOfFile: filepath, encoding: .utf8)
+        let contents = try String(contentsOf: fileURL, encoding: .utf8)
         return contents
     } catch {
-        print("File Read Error for file \(filepath)")
+        print("File Read Error for file \(fileName)")
         return nil
     }
 }
 
-func csv(data: String) -> [[String]] {
-    var result: [[String]] = []
+func csv(data: String) -> [[String: String]] {
+    var result: [[String: String]] = []
     let rows = data.components(separatedBy: "\n")
     for row in rows {
-        let columns = row.components(separatedBy: " ")
-        result.append(columns)
+        let newRow = row.replacingOccurrences(of: " ", with: "")
+        let columns = row.components(separatedBy: CharacterSet(charactersIn: ","))
+        print(columns)
+        var dictionary = Dictionary<String, String>()
+        dictionary.updateValue(columns.last ?? "no data",
+                               forKey: columns[0].replacingOccurrences(of: " ", with: ""))
+        result.append(dictionary)
     }
+    result.removeLast()
     return result
 }
