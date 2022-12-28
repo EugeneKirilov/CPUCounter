@@ -6,8 +6,8 @@
 //
 import Foundation
 
-@discardableResult
-func safeShell(_ command: String) throws -> String {
+//@discardableResult
+func safeShell(_ command: String) throws {
     let task = Process()
     let pipe = Pipe()
     
@@ -19,10 +19,10 @@ func safeShell(_ command: String) throws -> String {
 
     try task.run()
     
-    let data = pipe.fileHandleForReading.readDataToEndOfFile()
-    let output = String(data: data, encoding: .utf8) ?? "nil"
-    
-    return output
+//    let data = pipe.fileHandleForReading.readDataToEndOfFile()
+//    let output = String(data: data, encoding: .utf8) ?? "nil"
+//
+//    return output
 }
 
 
