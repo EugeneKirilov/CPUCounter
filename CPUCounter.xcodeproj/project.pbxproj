@@ -71,16 +71,48 @@
 		E43228AA295B0BAD005169FC /* CPUCounter */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */,
-				E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */,
-				E4ADFD03295B278000A93E23 /* safeShell.swift */,
-				E4ADFD07295B323100A93E23 /* CSVWriter.swift */,
-				E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */,
-				E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */,
-				E4ADFD13295C53C800A93E23 /* showCPULoad.swift */,
+				E4ADFD15295C5A4800A93E23 /* Start prints */,
+				E4ADFD16295C5A6400A93E23 /* Working with shell */,
+				E4ADFD17295C5A7B00A93E23 /* CSVManager */,
+				E4ADFD18295C5A9F00A93E23 /* CPU loading funcs */,
 				E43228AB295B0BAD005169FC /* main.swift */,
 			);
 			path = CPUCounter;
+			sourceTree = "<group>";
+		};
+		E4ADFD15295C5A4800A93E23 /* Start prints */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */,
+				E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */,
+			);
+			path = "Start prints";
+			sourceTree = "<group>";
+		};
+		E4ADFD16295C5A6400A93E23 /* Working with shell */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFD03295B278000A93E23 /* safeShell.swift */,
+			);
+			path = "Working with shell";
+			sourceTree = "<group>";
+		};
+		E4ADFD17295C5A7B00A93E23 /* CSVManager */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFD07295B323100A93E23 /* CSVWriter.swift */,
+				E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */,
+			);
+			path = CSVManager;
+			sourceTree = "<group>";
+		};
+		E4ADFD18295C5A9F00A93E23 /* CPU loading funcs */ = {
+			isa = PBXGroup;
+			children = (
+				E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */,
+				E4ADFD13295C53C800A93E23 /* showCPULoad.swift */,
+			);
+			path = "CPU loading funcs";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
