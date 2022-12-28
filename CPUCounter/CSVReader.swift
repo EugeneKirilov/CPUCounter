@@ -26,11 +26,10 @@ func csv(data: String) -> [[String: String]] {
     let rows = data.components(separatedBy: "\n")
     for row in rows {
         let newRow = row.replacingOccurrences(of: " ", with: "")
-        let columns = row.components(separatedBy: CharacterSet(charactersIn: ","))
-        print(columns)
+        let columns = newRow.components(separatedBy: CharacterSet(charactersIn: ","))
         var dictionary = Dictionary<String, String>()
         dictionary.updateValue(columns.last ?? "no data",
-                               forKey: columns[0].replacingOccurrences(of: " ", with: ""))
+                               forKey: columns[0])
         result.append(dictionary)
     }
     result.removeLast()

@@ -20,6 +20,6 @@ createCSV(from: arrayForCSV)
 
 var data = readDataFromCSV(fileName: "CSVRec.csv")
 let csvRows = csv(data: data ?? "none")
-print(csvRows)
+
 
 

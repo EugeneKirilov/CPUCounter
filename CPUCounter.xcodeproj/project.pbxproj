@@ -13,6 +13,7 @@
 		E4ADFD04295B278000A93E23 /* safeShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD03295B278000A93E23 /* safeShell.swift */; };
 		E4ADFD08295B323100A93E23 /* CSVWriter.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD07295B323100A93E23 /* CSVWriter.swift */; };
 		E4ADFD0D295C2D2000A93E23 /* CSVReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */; };
+		E4ADFD12295C52B600A93E23 /* watchCPULoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -35,6 +36,7 @@
 		E4ADFD03295B278000A93E23 /* safeShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = safeShell.swift; sourceTree = "<group>"; };
 		E4ADFD07295B323100A93E23 /* CSVWriter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVWriter.swift; sourceTree = "<group>"; };
 		E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVReader.swift; sourceTree = "<group>"; };
+		E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = watchCPULoad.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 				E4ADFD03295B278000A93E23 /* safeShell.swift */,
 				E4ADFD07295B323100A93E23 /* CSVWriter.swift */,
 				E4ADFD0C295C2D2000A93E23 /* CSVReader.swift */,
+				E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */,
 				E43228AB295B0BAD005169FC /* main.swift */,
 			);
 			path = CPUCounter;
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4ADFCFE295B164A00A93E23 /* printHelloAndAbout.swift in Sources */,
+				E4ADFD12295C52B600A93E23 /* watchCPULoad.swift in Sources */,
 				E4ADFD04295B278000A93E23 /* safeShell.swift in Sources */,
 				E4ADFD02295B1C2900A93E23 /* printRunningApplications.swift in Sources */,
 				E43228AC295B0BAD005169FC /* main.swift in Sources */,
