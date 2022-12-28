@@ -13,10 +13,12 @@ import Cocoa
 printHelloAndAbout()
 
 printRunningApplications()
-makeNameCpuDictionary()
 
-for (name, cpu) in nameCpuDictionary {
-    print("\(name) - \(cpu)")
-}
+makeArrayForCSV()
+
+createCSV(from: arrayForCSV)
+//var data = readDataFromCSV(fileName: "output.csv", fileType: "csv", directory: "CPUCounter")
+//let csvRows = csv(data: data ?? "none")
+//print(csvRows[1][1])
 
 
