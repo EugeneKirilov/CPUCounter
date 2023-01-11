@@ -13,15 +13,14 @@ func safeShell(_ command: String) throws -> String {
     
     task.standardOutput = pipe
     task.standardError = pipe
-    task.arguments = ["-c", command]
-    task.executableURL = URL(fileURLWithPath: "/bin/zsh")
+    task.arguments = [Constants.cOption.rawValue, command]
+    task.executableURL = URL(fileURLWithPath: Constants.filePath.rawValue)
     task.standardInput = nil
 
     try task.run()
     
     let data = pipe.fileHandleForReading.readDataToEndOfFile()
-    let output = String(data: data, encoding: .utf8)!
+    let output = String(data: data, encoding: .utf8) ?? Constants.noData.rawValue
     
     return output
 }
-

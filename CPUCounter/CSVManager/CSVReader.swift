@@ -8,30 +8,33 @@
 import Foundation
 
 func readDataFromCSV(fileName: String) -> String? {
-    guard let dir = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask).first else {
+    guard let directory = FileManager.default.urls(for: .documentDirectory, in: .allDomainsMask).first else {
         return nil
     }
-    let fileURL = dir.appendingPathComponent(fileName)
+    
+    let fileURL = directory.appendingPathComponent(fileName)
+    
     do {
         let contents = try String(contentsOf: fileURL, encoding: .utf8)
         return contents
     } catch {
-        print("File Read Error for file \(fileName)")
+        print(Constants.fileReadError.rawValue + fileName)
         return nil
     }
 }
 
 func csv(data: String) -> [[String: String]] {
     var result: [[String: String]] = []
-    let rows = data.components(separatedBy: "\n")
+    let rows = data.components(separatedBy: Constants.emptyStringSeparator.rawValue)
+    
     for row in rows {
         let newRow = row.replacingOccurrences(of: " ", with: "")
-        let columns = newRow.components(separatedBy: CharacterSet(charactersIn: ","))
+        let columns = newRow.components(separatedBy: CharacterSet(charactersIn: Constants.comma.rawValue))
         var dictionary = Dictionary<String, String>()
-        dictionary.updateValue(columns.last ?? "no data",
-                               forKey: columns[0])
+        dictionary.updateValue(columns.last ?? Constants.noData.rawValue, forKey: columns[0])
         result.append(dictionary)
     }
+    
     result.removeLast()
     return result
 }

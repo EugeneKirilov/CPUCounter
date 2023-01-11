@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		E43228AC295B0BAD005169FC /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43228AB295B0BAD005169FC /* main.swift */; };
+		E4A74404296DA69900C0FA7B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4A74403296DA69900C0FA7B /* Constants.swift */; };
 		E4ADFCFE295B164A00A93E23 /* printHelloAndAbout.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */; };
 		E4ADFD02295B1C2900A93E23 /* printRunningApplications.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */; };
 		E4ADFD04295B278000A93E23 /* safeShell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4ADFD03295B278000A93E23 /* safeShell.swift */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		E43228A8295B0BAD005169FC /* CPUCounter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = CPUCounter; sourceTree = BUILT_PRODUCTS_DIR; };
 		E43228AB295B0BAD005169FC /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		E4A74403296DA69900C0FA7B /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printHelloAndAbout.swift; sourceTree = "<group>"; };
 		E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = printRunningApplications.swift; sourceTree = "<group>"; };
 		E4ADFD03295B278000A93E23 /* safeShell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = safeShell.swift; sourceTree = "<group>"; };
@@ -71,30 +73,31 @@
 		E43228AA295B0BAD005169FC /* CPUCounter */ = {
 			isa = PBXGroup;
 			children = (
-				E4ADFD15295C5A4800A93E23 /* Start prints */,
-				E4ADFD16295C5A6400A93E23 /* Working with shell */,
+				E4ADFD15295C5A4800A93E23 /* StartPrints */,
+				E4ADFD16295C5A6400A93E23 /* WorkingWithShell */,
 				E4ADFD17295C5A7B00A93E23 /* CSVManager */,
-				E4ADFD18295C5A9F00A93E23 /* CPU loading funcs */,
+				E4ADFD18295C5A9F00A93E23 /* CPULoadingFuncs */,
+				E4A74403296DA69900C0FA7B /* Constants.swift */,
 				E43228AB295B0BAD005169FC /* main.swift */,
 			);
 			path = CPUCounter;
 			sourceTree = "<group>";
 		};
-		E4ADFD15295C5A4800A93E23 /* Start prints */ = {
+		E4ADFD15295C5A4800A93E23 /* StartPrints */ = {
 			isa = PBXGroup;
 			children = (
 				E4ADFCFD295B164A00A93E23 /* printHelloAndAbout.swift */,
 				E4ADFD01295B1C2900A93E23 /* printRunningApplications.swift */,
 			);
-			path = "Start prints";
+			path = StartPrints;
 			sourceTree = "<group>";
 		};
-		E4ADFD16295C5A6400A93E23 /* Working with shell */ = {
+		E4ADFD16295C5A6400A93E23 /* WorkingWithShell */ = {
 			isa = PBXGroup;
 			children = (
 				E4ADFD03295B278000A93E23 /* safeShell.swift */,
 			);
-			path = "Working with shell";
+			path = WorkingWithShell;
 			sourceTree = "<group>";
 		};
 		E4ADFD17295C5A7B00A93E23 /* CSVManager */ = {
@@ -106,13 +109,13 @@
 			path = CSVManager;
 			sourceTree = "<group>";
 		};
-		E4ADFD18295C5A9F00A93E23 /* CPU loading funcs */ = {
+		E4ADFD18295C5A9F00A93E23 /* CPULoadingFuncs */ = {
 			isa = PBXGroup;
 			children = (
 				E4ADFD11295C52B600A93E23 /* watchCPULoad.swift */,
 				E4ADFD13295C53C800A93E23 /* showCPULoad.swift */,
 			);
-			path = "CPU loading funcs";
+			path = CPULoadingFuncs;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,6 +184,7 @@
 				E4ADFD14295C53C800A93E23 /* showCPULoad.swift in Sources */,
 				E4ADFD08295B323100A93E23 /* CSVWriter.swift in Sources */,
 				E4ADFD0D295C2D2000A93E23 /* CSVReader.swift in Sources */,
+				E4A74404296DA69900C0FA7B /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
