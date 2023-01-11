@@ -20,8 +20,8 @@ makeArrayForCSV()
 createCSV(from: arrayForCSV)
 
 // читаем данные из CSV
-var data = readDataFromCSV(fileName: "CSVRec.csv")
-let csvRows = csv(data: data ?? "none")
+var data = readDataFromCSV(fileName: Constants.csvFileName.rawValue)
+let csvRows = csv(data: data ?? Constants.none.rawValue)
 
 // функция показа данных о загрузке процессора
 showCPULoad(dataDictionary: csvRows)
